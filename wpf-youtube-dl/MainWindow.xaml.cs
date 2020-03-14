@@ -46,7 +46,6 @@ namespace wpf_youtube_dl
 
         private void btn_CheckQuality_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(" -f bestvideo[vcodec^=av01]+bestaudio ");
             ps = null;
             iasresult = null;
             string cmdScript = getCommand("check");
@@ -100,16 +99,11 @@ namespace wpf_youtube_dl
 
         void Error_DataAdded(object sender, DataAddedEventArgs e)
         {
-            // do something when an error is written to the error stream
-            tb_Out.Dispatcher.Invoke(() =>
-            {
-                tb_Out.Text = "ERROR!";
-            });
+
         }
 
         void outputCollection_DataAdded(object sender, DataAddedEventArgs e)
         {
-            // do something when an object is written to the output stream
 
             tb_Out.Dispatcher.Invoke(() =>
             {
