@@ -75,11 +75,11 @@ namespace wpf_youtube_dl
                 {
                     if (!String.IsNullOrEmpty(tb_Proxy.Text))
                     {
-                        return ".\\youtube-dl.exe --proxy " + tb_Proxy.Text + " -f bestvideo+bestaudio " + tb_Link.Text;
+                        return ".\\youtube-dl.exe --proxy " + tb_Proxy.Text + " -f bestvideo[vcodec^=vp9]+bestaudio " + tb_Link.Text;
                     }
                     else
                     {
-                        return ".\\youtube-dl.exe -f bestvideo+bestaudio " + tb_Link.Text;
+                        return ".\\youtube-dl.exe -f bestvideo[vcodec^=vp9]+bestaudio " + tb_Link.Text;
                     }
                 }
             }
