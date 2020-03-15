@@ -1,5 +1,9 @@
 # wpf-youtube-dl
-Simpoe youtube-dl WPF GUI tool
+Simple youtube-dl WPF GUI tool
+
+Simple means it is extremely simple. Do not expect it to do complicated jobs.
+
+Default download quality is best VP9 + best OPUS.
 
 ## Usage
 You must have `youtube-dl.exe` and `avconv` being placed within the same folder of this app.
@@ -14,3 +18,8 @@ You should check available quality first before downloading AV1 coded videos, si
 System.Management.Automation 7.0
 
 Microsoft.PowerShell.SDK 7.0
+
+## License
+The GPL v3 License.
+
+![image](http://www.gnu.org/graphics/gplv3-127x51.png)
