@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
@@ -30,6 +31,7 @@ namespace wpf_youtube_dl
         public MainWindow()
         {
             InitializeComponent();
+            tb_Path.Text = Directory.GetCurrentDirectory();
         }
 
         private void btn_StartDownload_Click(object sender, RoutedEventArgs e)
@@ -64,22 +66,22 @@ namespace wpf_youtube_dl
                 {
                     if (!String.IsNullOrEmpty(tb_Proxy.Text))
                     {
-                        return ".\\youtube-dl.exe --proxy " + tb_Proxy.Text + " -f bestvideo[vcodec^=av01]+bestaudio " + tb_Link.Text;
+                        return ".\\youtube-dl.exe --proxy " + tb_Proxy.Text + " -f bestvideo[vcodec^=av01]+bestaudio[acodec^=opus] -o \'" + tb_Path.Text + "%(title)s-%(id)s.%(vcodec)s.%(ext)s\' " + tb_Link.Text;
                     }
                     else
                     {
-                        return ".\\youtube-dl.exe -f bestvideo[vcodec^=av01]+bestaudio " + tb_Link.Text;
+                        return ".\\youtube-dl.exe -f bestvideo[vcodec^=av01]+bestaudio[acodec^=opus] -o \'" + tb_Path.Text + "%(title)s-%(id)s.%(vcodec)s.%(ext)s\' " + tb_Link.Text;
                     }
                 }
                 else
                 {
                     if (!String.IsNullOrEmpty(tb_Proxy.Text))
                     {
-                        return ".\\youtube-dl.exe --proxy " + tb_Proxy.Text + " -f bestvideo[vcodec^=vp9]+bestaudio " + tb_Link.Text;
+                        return ".\\youtube-dl.exe --proxy " + tb_Proxy.Text + " -f bestvideo[vcodec^=vp9]+bestaudio[acodec^=opus] -o \'" + tb_Path.Text + "%(title)s-%(id)s.%(vcodec)s.%(ext)s\' " + tb_Link.Text;
                     }
                     else
                     {
-                        return ".\\youtube-dl.exe -f bestvideo[vcodec^=vp9]+bestaudio " + tb_Link.Text;
+                        return ".\\youtube-dl.exe -f bestvideo[vcodec^=vp9]+bestaudio[acodec^=opus] -o \'" + tb_Path.Text + "%(title)s-%(id)s.%(vcodec)s.%(ext)s\' " + tb_Link.Text;
                     }
                 }
             }

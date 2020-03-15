@@ -5,9 +5,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>wpf_youtube_dl</RootNamespace>
     <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="4.1.0" />
     <PackageReference Include="Microsoft.NETCore.App" Version="2.2.8" />
     <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.0.0" />
     <PackageReference Include="System.Management.Automation" Version="7.0.0" />

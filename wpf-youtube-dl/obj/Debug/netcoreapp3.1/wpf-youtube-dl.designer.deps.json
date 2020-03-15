@@ -6,6 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Costura.Fody/4.1.0": {},
       "Markdig.Signed/0.18.1": {
         "runtime": {
           "lib/netcoreapp2.1/Markdig.Signed.dll": {
@@ -1978,6 +1979,13 @@
     }
   },
   "libraries": {
+    "Costura.Fody/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MkW5aqhqNvuP6MiaaD5Yx8efXv+5ucsumRx+Nsn5b+PA4RnaxJLtXhGkm1N+Hi7sjkSlL8kl1klSS/7v2DxZHw==",
+      "path": "costura.fody/4.1.0",
+      "hashPath": "costura.fody.4.1.0.nupkg.sha512"
+    },
     "Markdig.Signed/0.18.1": {
       "type": "package",
       "serviceable": true,

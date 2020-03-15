@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Costura.Fody": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
             "Microsoft.NETCore.App": {
               "target": "Package",
               "version": "[2.2.8, )"

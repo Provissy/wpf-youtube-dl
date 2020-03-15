@@ -2,6 +2,12 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Costura.Fody/4.1.0": {
+        "type": "package",
+        "build": {
+          "build/Costura.Fody.props": {}
+        }
+      },
       "Markdig.Signed/0.18.1": {
         "type": "package",
         "compile": {
@@ -3195,6 +3201,22 @@
     }
   },
   "libraries": {
+    "Costura.Fody/4.1.0": {
+      "sha512": "MkW5aqhqNvuP6MiaaD5Yx8efXv+5ucsumRx+Nsn5b+PA4RnaxJLtXhGkm1N+Hi7sjkSlL8kl1klSS/7v2DxZHw==",
+      "type": "package",
+      "path": "costura.fody/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Costura.Fody.props",
+        "costura.fody.4.1.0.nupkg.sha512",
+        "costura.fody.nuspec",
+        "lib/net40/Costura.dll",
+        "lib/net40/Costura.xml",
+        "weaver/Costura.Fody.dll",
+        "weaver/Costura.Fody.xcf"
+      ]
+    },
     "Markdig.Signed/0.18.1": {
       "sha512": "J1PlQF0xijCY5fNI9oWsJ7veMc23fpaXowUhGoRHen2cuHCWLePa9gUyqtgmHxPzEhZVak90RNxoiFqcYIOByg==",
       "type": "package",
@@ -7997,6 +8019,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Costura.Fody >= 4.1.0",
       "Microsoft.NETCore.App >= 2.2.8",
       "Microsoft.PowerShell.SDK >= 7.0.0",
       "System.Management.Automation >= 7.0.0"
@@ -8039,6 +8062,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Costura.Fody": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "[2.2.8, )"
