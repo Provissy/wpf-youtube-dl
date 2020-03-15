@@ -7,6 +7,9 @@
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64</Platforms>
     <Version>0.0.1</Version>
+    <Description>Simple youtube-dl WPF GUI tool</Description>
+    <PackageLicenseExpression>GPL v3 License</PackageLicenseExpression>
+    <Copyright>@Provissy</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
