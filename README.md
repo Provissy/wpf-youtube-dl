@@ -19,6 +19,11 @@ System.Management.Automation 7.0
 
 Microsoft.PowerShell.SDK 7.0
 
+## Build
+VS 2019
+
+Open the solution, install required NuGet packges then build.
+
 ## License
 The GPL v3 License.
 
