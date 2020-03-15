@@ -6,6 +6,7 @@
     <RootNamespace>wpf_youtube_dl</RootNamespace>
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64</Platforms>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
