@@ -5,20 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpf_youtube_dl"
         mc:Ignorable="d"
-        Title="MainWindow" Height="641" Width="957">
+        Title="wpf-youtube-dl" Height="649" Width="963">
     <Grid>
         <Button x:Name="btn_StartDownload" Content="Start Download" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Click="btn_StartDownload_Click" Width="111" Background="#FFB5FFBF"/>
         <CheckBox x:Name="cb_AV1" Content="AV1" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tb_Link" HorizontalAlignment="Left" Margin="10,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" Height="77"/>
         <Button x:Name="btn_CheckQuality" Content="Check Quality" HorizontalAlignment="Left" Margin="126,126,0,0" VerticalAlignment="Top" Click="btn_CheckQuality_Click" Width="116" Background="#FF72D2FF"/>
-        <TextBox x:Name="tb_Out" HorizontalAlignment="Left" Margin="247,28,0,0" Text="Output" TextWrapping="Wrap" VerticalAlignment="Top" Width="698" Height="584" IsReadOnly="True" Grid.RowSpan="2"/>
-        <TextBox x:Name="tb_Proxy" HorizontalAlignment="Left" Margin="7,260,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="235"/>
+        <TextBox x:Name="tb_Out" Margin="247,28,18,21" Text="Output" TextWrapping="Wrap" IsReadOnly="True"/>
+        <TextBox x:Name="tb_Proxy" HorizontalAlignment="Left" Margin="7,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,239,0,0" Text="Proxy:" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,23,0,0" Text="Link" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:Name="btn_Stop" Content="Stop" Margin="10,0,889,120" Click="btn_Stop_Click" FontSize="14" Height="35" VerticalAlignment="Bottom" Background="#FFFF9595"/>
+        <Button x:Name="btn_Stop" Content="Stop" Margin="10,478,0,0" Click="btn_Stop_Click" FontSize="14" Background="#FFFF9595" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="64"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,190,0,0" Text="Note: Some video may not provide HQ AV1" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox x:Name="tb_Path" HorizontalAlignment="Left" Margin="8,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Height="89" Grid.RowSpan="2"/>
         <TextBlock HorizontalAlignment="Left" Margin="8,326,0,0" Text="Save path:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="btn_OpenDest" Content="Open Dest" HorizontalAlignment="Left" Margin="171,478,0,0" VerticalAlignment="Top" Height="35" Width="71" Background="#FFE986FF" Click="btn_OpenDest_Click"/>
 
     </Grid>
 </Window>

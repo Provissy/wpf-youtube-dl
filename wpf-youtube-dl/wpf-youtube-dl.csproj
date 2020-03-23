@@ -6,10 +6,11 @@
     <RootNamespace>wpf_youtube_dl</RootNamespace>
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64</Platforms>
-    <Version>0.0.1</Version>
+    <Version>0.1.0</Version>
     <Description>Simple youtube-dl WPF GUI tool</Description>
     <PackageLicenseExpression>GPL v3 License</PackageLicenseExpression>
     <Copyright>@Provissy</Copyright>
+    <ApplicationIcon>Annotation 2020-03-23 152055 (1).ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
