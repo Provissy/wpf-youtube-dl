@@ -37,8 +37,8 @@ namespace wpf_youtube_dl
 
             // For my own test only.
 
-            //tb_Proxy.Text = "127.0.0.1:30997";
-            //tb_Path.Text = "R:\\! Youtube Video\\";
+            \\tb_Proxy.Text = "127.0.0.1:30997";
+            \\tb_Path.Text = "R:\\! Youtube Video\\";
         }
 
         private void btn_StartDownload_Click(object sender, RoutedEventArgs e)
@@ -87,7 +87,7 @@ namespace wpf_youtube_dl
                 qualityMode = "bestvideo[vcodec^=vp9]+bestaudio[acodec^=opus]";
 
             if (type == "down")
-                return ".\\youtube-dl.exe " + proxyStatus + " -f " + qualityMode + " --add-metadata -o \"" + tb_Path.Text + "%(title)s-%(id)s.%(vcodec)s.%(ext)s\" " + tb_Link.Text;
+                return ".\\youtube-dl.exe " + proxyStatus + " -f " + qualityMode + " --add-metadata --all-subs -o \"" + tb_Path.Text + "%(title)s-%(id)s.%(vcodec)s.%(ext)s\" " + tb_Link.Text;
             else
                 return ".\\youtube-dl.exe " + proxyStatus + " -F " + tb_Link.Text;
         }
