@@ -12,7 +12,7 @@ Paste youtube link and click Check Quality or Start Download.
 
 You should check available quality first before downloading AV1 coded videos, since AV1 support on youtube is not completed yet.
 
-## Dependencies
+## Build Dependencies
 ![image](https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/ps_black_64.svg?sanitize=true)
 
 .net Core 3.1
@@ -20,6 +20,11 @@ You should check available quality first before downloading AV1 coded videos, si
 System.Management.Automation 7.0
 
 Microsoft.PowerShell.SDK 7.0
+
+## Depends
+[youtube-dl](https://github.com/ytdl-org/youtube-dl)
+
+[libav](https://libav.org)
 
 ## Build
 VS 2019
