@@ -6,7 +6,7 @@
     <RootNamespace>wpf_youtube_dl</RootNamespace>
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64</Platforms>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Description>Simple youtube-dl WPF GUI tool</Description>
     <PackageLicenseExpression>GPL v3 License</PackageLicenseExpression>
     <Copyright>@Provissy</Copyright>
@@ -15,6 +15,14 @@
 
   <ItemGroup>
     <PackageReference Include="Costura.Fody" Version="4.1.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.App" Version="2.2.8" />
     <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.0.0" />
     <PackageReference Include="System.Management.Automation" Version="7.0.0" />

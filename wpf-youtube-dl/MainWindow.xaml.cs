@@ -73,43 +73,23 @@ namespace wpf_youtube_dl
 
         private string getCommand(string type)
         {
-            if(type == "down")
-            {
-                if(cb_AV1.IsChecked== true)
-                {
-                    if (!String.IsNullOrEmpty(tb_Proxy.Text))
-                    {
-                        return ".\\youtube-dl.exe --proxy " + tb_Proxy.Text + " -f bestvideo[vcodec^=av01]+bestaudio[acodec^=opus] -o \"" + tb_Path.Text + "%(title)s-%(id)s.%(vcodec)s.%(ext)s\" " + tb_Link.Text;
-                    }
-                    else
-                    {
-                        return ".\\youtube-dl.exe -f bestvideo[vcodec^=av01]+bestaudio[acodec^=opus] -o \"" + tb_Path.Text + "%(title)s-%(id)s.%(vcodec)s.%(ext)s\" " + tb_Link.Text;
-                    }
-                }
-                else
-                {
-                    if (!String.IsNullOrEmpty(tb_Proxy.Text))
-                    {
-                        return ".\\youtube-dl.exe --proxy " + tb_Proxy.Text + " -f bestvideo[vcodec^=vp9]+bestaudio[acodec^=opus] -o \"" + tb_Path.Text + "%(title)s-%(id)s.%(vcodec)s.%(ext)s\" " + tb_Link.Text;
-                    }
-                    else
-                    {
-                        return ".\\youtube-dl.exe -f bestvideo[vcodec^=vp9]+bestaudio[acodec^=opus] -o \"" + tb_Path.Text + "%(title)s-%(id)s.%(vcodec)s.%(ext)s\" " + tb_Link.Text;
-                    }
-                }
-            }
+            string proxyStatus = "";
+            string qualityMode = "";
+
+            if (!String.IsNullOrEmpty(tb_Proxy.Text))
+                proxyStatus = "--proxy " + tb_Proxy.Text;
+
+            if (cb_AV1.IsChecked == true)
+                qualityMode = "bestvideo[vcodec^=av01]+bestaudio[acodec^=opus]";
+            else if (cb_Best.IsChecked == true)
+                qualityMode = "best";
             else
-            {
-                if (!String.IsNullOrEmpty(tb_Proxy.Text))
-                {
-                    return ".\\youtube-dl.exe --proxy " + tb_Proxy.Text + " -F " + tb_Link.Text;
-                }
-                else
-                {
-                    return ".\\youtube-dl.exe -F " + tb_Link.Text;
-                }
-            }
-            
+                qualityMode = "bestvideo[vcodec^=vp9]+bestaudio[acodec^=opus]";
+
+            if (type == "down")
+                return ".\\youtube-dl.exe " + proxyStatus + " -f " + qualityMode + " --add-metadata -o \"" + tb_Path.Text + "%(title)s-%(id)s.%(vcodec)s.%(ext)s\" " + tb_Link.Text;
+            else
+                return ".\\youtube-dl.exe " + proxyStatus + " -F " + tb_Link.Text;
         }
 
         void Error_DataAdded(object sender, DataAddedEventArgs e)
